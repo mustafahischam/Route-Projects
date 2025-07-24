@@ -9,7 +9,7 @@ import NotFound from './Components/Not-Found/NotFound.jsx';
 
 const router = createBrowserRouter([
     {
-        path: '/',  element: <Layout />, children: [
+        path: '/', element: <Layout />, children: [
             { index: true, element: <Home /> },
             { path: 'about', element: <About /> },
             { path: 'portfolio', element: <Portfolio /> },
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
             { path: '*', element: <NotFound /> },
         ],
     },
-]);
+], { basename: "/Route-Projects/Start-Framework/" });
 
 export default function App() {
     return <RouterProvider router={router} />;
